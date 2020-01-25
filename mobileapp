@@ -1,0 +1,83 @@
+--filter the list of inventors for those who were born in the 1500's--
+
+    const fifteen = inventors.filter(function(inventor) {
+            if(inventor.year >= 1500 && inventor.year < 1600) {
+                return true;
+            } else {
+              return false;
+            }
+    });
+console.table(fifteen); 
+
+        --give us an array of the inventory first and last names--
+
+const fullNames = inventors.map(inventor => inventor.first + inventor.last);
+concole.log(fullNames);
+
+
+        --sort the inventors by bday, oldest to youngest--
+
+const ordered = inventors.sort(function(a, b) {
+    if(a.year > b.year) {
+        return 1;
+    } else {
+      return -1;
+    }
+});
+
+console.table(ordered)
+
+        (to shorten it)
+            const ordered = invetors.sort((a, b) => a.year > b.year ? 1 : -1);
+
+
+        --how many years did inventors live--
+
+const totalYears = inventors.reduce((total, inventor) => {
+    return total + (inventor. passed - inventor.year);
+}, 0);
+
+        --sort the invetors by years lived--
+
+const oldest = invetors.sort(function(a, b) {
+    const lastGuy = a.passed - a.year;
+    const nextGuy = b.passed - b.year;
+                (short way to do it ->) return lastGuy > nextGuy ? -1 : 1;
+    if(lastGuy > nextGuy) {
+        return -1;
+    } else {
+        return 1;
+    }
+    });
+console.table(oldest)
+
+        --create a list that contain 'de' anywhere in the names--
+
+const category = document.querySelector('.mw-category');
+const links = Array.from(category.querySelectorAll('a');
+
+const de = links.map(link => link.textContent);
+
+const de = links
+            .map(link => link.textContent)
+            .filter(streetName => streetName.includes('de'));
+
+
+        --sort the ppl alphabetically by last names--
+
+const alpha = people.sort(function(lastOne, nextOne) {
+    const [aLast, bFirst] = lastOne.split(', ');
+    const [bLast, bFirst] = nextOne.split(', ');
+        return aLast > bLast ? 1 : -1;
+
+});
+console.log(last, first);
+
+        --sum of the instances of each--
+
+const transportation = data.reduce(function(obj, item)) {
+    obj[item]++;
+    return obj;
+}, {})
+
+
