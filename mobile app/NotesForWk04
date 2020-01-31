@@ -1,0 +1,15 @@
+<div class> to create a grid
+
+.grid-container {
+  display: grid;      <!--formats this into a grid-->
+  grid-template-columns: 100px 100px 100px; <!--sizes the 3 colums-->
+  padding: 5px;
+  grid-template-rows: 100px 100px 100px; <!--sizes the 3 rows-->
+  border: none;
+}
+.grid-item {
+  border: 2px solid;  <!--inside the grid, the border thickness-->
+}
+
+<p ontouchend="myFunction()">Touch this paragraph, then release to reveal>
+   <!-- ^ for touch screens, when touched js will appear-->
