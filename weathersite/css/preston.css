@@ -25,11 +25,6 @@ h3 {
 .fas fa-wind {
     font-size: 15px;
 }
-.columns {
-    display: flex;
-    flex-direction: column;
-    background-color:
-  }
   .flex-container {
     display: flex;
     flex-direction: column;
@@ -37,15 +32,24 @@ h3 {
   }
   
   .flex-container > div {
-    margin: 10px;
+    margin: 13px;
     margin-left: 190px;
+    margin-bottom: 45;
     text-align: center;
-    line-height: 90px;
+    vertical-align: middle;
+    font-size: 35px;
+    line-height: 70px;
     border: 1px solid black;
     border-radius: 25px;
     padding: 20px; 
     width: 550px;
-    height: 200px;  
-    justify-content: center;
-    align-content: center;
+    height: 200px;   
   }
+ footer {
+     background-color: gainsboro;
+     text-align: center;
+     height: 80px;
+     font-size: 60px;
+     padding: 5px;
+
+ }
