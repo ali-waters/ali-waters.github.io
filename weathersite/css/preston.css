@@ -9,12 +9,12 @@ img {
     padding-right: 5px;
 }
 p {
-    font-size: 30px;
+    font-size: 35px;
     font-family: monospace;
     font-style: italic;
 }
 h1 {
-    font-size: 80px;
+    font-size: 95px;
 }
 .columns {
     font-size: 100px;
@@ -42,8 +42,8 @@ h3 {
     border: 1px solid black;
     border-radius: 25px;
     padding: 20px; 
-    width: 550px;
-    height: 200px;   
+    width: 560px;
+    height: 250px;   
   }
  footer {
      background-color: gainsboro;

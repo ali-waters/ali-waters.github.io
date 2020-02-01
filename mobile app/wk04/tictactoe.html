@@ -37,30 +37,100 @@ function myFunction() {
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Tic Tac Toe</title>
     <style>
-      #ttt-game {
-        display: grid;
-        max-width: 600px;
-        margin: 0 auto;
-        grid-template-columns: 33% 33% 33%;
-        grid-gap: 5px;
+      /* styles for the table based board */
+      .board {
+        width: 320px;
+        height: 320px;
       }
-      #ttt-game div {
-        font-size: 3em;
+      .board td,
+      .board tr {
+        width: 33.3%;
+        height: 33.3%;
+      }
+      .board td {
+        border-right: 1px solid;
+        border-bottom: 1px solid;
+        font-size: 5em;
         text-align: center;
-        background: #eee;
-        padding: 50px;
       }
-      #ttt-game div.player {
-        background: #c2e3ff;
+
+      .board td:last-child {
+        border-right: 0;
       }
-      #ttt-game div.computer {
-        background: #ffebeb;
+
+      .board tr:last-child td {
+        border-bottom: 0;
       }
+
+      /* Styles for the div based board */
+      .divBoard {
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 100px 100px 100px;
+        justify-content: center;
+      }
+      .divBoard > div {
+        /* border-right: 1px solid;
+        border-bottom: 1px solid; */
+        border: 1px solid;
+        font-size: 5em;
+        text-align: center;
+      }
+      /* .divBoard > div:nth-child(3n) {
+        border-right: 0;
+      }
+      .divBoard > div:nth-child(n + 7) {
+        border-bottom: 0;
+      } */
     </style>
-    <script src="ttt.js"></script>
   </head>
   <body>
-    <div id="ttt-game"></div>
+  
+    <!-- Here is a board built with simple div elements. The markup is simpler, but it will require more styling to get it to look like a tic tac toe board. All of the cells are direct children of the board, so they will be easy to get a hold of.-->
+    <div class="divBoard">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <button id="reset">Reset</button>
+
+    <script>
+      const board = document.querySelector('.board');
+      const divBoard = document.querySelector('.divBoard');
+      const resetButton = document.getElementById('reset');
+      const player1 = 'X';
+      const player2 = 'O';
+      let player = player1;
+      function addPiece(e) {
+        console.log(e.target);
+        e.target.innerHTML = player;
+        if (player === player1) player = player2;
+        else player = player1;
+      }
+    
+      // div version
+      function resetBoardDiv() {
+        const divBoard = document.querySelector('.divBoard');
+        for (let i = 0; i < divBoard.children.length; i++) {
+          divBoard.children[i].innerText = '';
+        }
+        const children = Array.from(divBoard.children);
+        const empty = children.filter(function(child) {
+          return child.innerText == 'X' || child.innerText == 'O';
+        });
+        console.log(empty);
+      }
+      board.addEventListener('click', addPiece);
+      divBoard.addEventListener('click', addPiece);
+      reset.addEventListener('click', resetBoardDiv);
+    </script>
   </body>
 </html>
