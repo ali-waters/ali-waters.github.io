@@ -11,5 +11,13 @@
   border: 2px solid;  <!--inside the grid, the border thickness-->
 }
 
+*for grid items you have to write the sizes in however many columns you want
+
+*if you use a percentage then it divides the screen
+
 <p ontouchend="myFunction()">Touch this paragraph, then release to reveal>
    <!-- ^ for touch screens, when touched js will appear-->
+  
+
+Flexbox: flexible box that lets you move things anywhere
+
