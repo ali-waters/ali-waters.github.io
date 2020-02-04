@@ -10,15 +10,17 @@
     </head>
     <body>
        <div class="top">
-         <img src="/weathersite/images/logo.png" alt="logo" height=200 width=250>
+         <img src="/weathersite/images/logo.png" alt="logo" height=300 width=350>
+         <h3>Sun Up to Sun Down</h3>
          <p>Just What The Weather Ordered!</p>
       </div>
         <div class="place">
-            <h1>Preston Town</h1>
+            <h1>Preston Town</h1> <hr><hr>
             <p><strong>Gps:</strong> 42.543, 111.5231 </p>
+            <hr>
         </div>
          <div class="flex-container">
-                    <div class="text1"><h1>28<span>&#8457;</span> <br>34 19 <br><i class='fas fa-wind'>3.7mph</i></h1></div>
+                    <div class="text1"><h1>28<span>&#8457;</span> <br>34 |  19 <br><i class='fas fa-wind'>3.7mph</i></h1></div>
                     <div>Temperatures</div>
                     <div>Precipitation</div> 
                     <div>Current Conditions</div> 
@@ -32,6 +34,11 @@
               <a href="#">Soda Springs</a>
               <a href="#">Favorites</a>
             </div>
+            <p id="demo"></p>
+            <script>
+              var d = new Date(2020, 1, 5);
+              document.getElementById("demo").innerHTML = d;
+            </script>
           </div>
         </footer>
 </body>
