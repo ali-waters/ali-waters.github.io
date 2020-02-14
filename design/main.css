@@ -48,7 +48,6 @@ p {
     text-align: center;
 }
 .column {
-    float: 
     width: 33.3%;
     height: 300px;
     column-gap: 20px;
