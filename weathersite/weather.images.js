@@ -21,4 +21,4 @@ imagesToLoad.forEach((img) => {
 });
 }
 else {
-}
+} 
