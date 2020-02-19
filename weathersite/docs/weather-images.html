@@ -5,27 +5,27 @@
         <meta charset="utf-8">
         <title>Responsive Images</title>
         <link rel="stylesheet" href="/css/weather.images.css">
-        <script src="/js/weather.images.js"></script>
     </head>
     <header>
         <h1>Responsive Images</h1>
     </header>
     <body>
-        <img src= 'data/img/placeholder.png' data-src="" alt="pic" height="500" width="500"><br>
-        <img data-src="/images/weatherimg/clouds.jpg" alt="pic" height="500" width="500"><br>
-        <img data-src="/images/weatherimg/fog.jpg" alt="pic" height="500" width="500"><br>
-        <img data-src="/images/weatherimg/rain.jpg" alt="pic" height="500" width="500"><br>
-        <img data-src="/images/weatherimg/snow.jpg" alt="pic" height="500" width="500"><br>
-
-        <div class="smallpic">
-            <img data-src="/images/weatherimg/clear.jpg" alt="pic" height="300" width="300"><br>
-            <img data-src="/images/weatherimg/clouds.jpg" alt="pic" height="300" width="300"><br>
-            <img data-src="/images/weatherimg/fog.jpg" alt="pic" height="300" width="300"><br>
-            <img data-src="/images/weatherimg/rain.jpg" alt="pic" height="300" width="300"><br>
-            <img data-src="/images/weatherimg/snow.jpg" alt="pic" height="300" width="300"><br>
-   
-        </div>
-    
+        <picture>
+            <source srcset="/images/weatherimg/clear.jpg" media="(min-width: 500px) and (max-width: 799px)">
+                <source srcset="" media="(min-width: 800px)">
+            <img src="/images/weatherimg/clear.jpg" alt="pic">
+            <img src="/images/weatherimg/clouds.jpg" alt="pic">
+            <img src="/images/weatherimg/fog.jpg" alt="pic">
+            <img src="/images/weatherimg/rain.jpg" alt="pic">
+            <img src="/images/weatherimg/snow.jpg" alt="pic">
+        </picture>
+        <div class="pic">
+        <img src="/images/weatherimg/clear.jpg" alt="pic">
+        <img src="/images/weatherimg/clouds.jpg" alt="pic">
+        <img src="/images/weatherimg/fog.jpg" alt="pic">
+        <img src="/images/weatherimg/rain.jpg" alt="pic">
+        <img src="/images/weatherimg/snow.jpg" alt="pic">
+       </div>
 </body>
 </html>
     
