@@ -112,3 +112,10 @@ h3 {
     position: absolute;
     top: 1150px;
   }
+  .ball {
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background-color: orangered;
+    color: transparent;
+   }
