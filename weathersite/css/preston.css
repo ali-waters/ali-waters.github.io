@@ -119,3 +119,466 @@ h3 {
     background-color: orangered;
     color: transparent;
    }
+
+   /* for the umbrella component*/
+   .component{
+    width: 200px;
+    height: 200px;
+    background-color: darkgray;
+    position: relative;
+    border-radius: 90%;
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+    
+}
+    
+.inner{
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 90%;
+    align-self: center;
+    
+}
+.red {
+  width: 20px;
+    height: 20px;
+    background-color: #DD2C00;
+    border-radius: 90%;
+    position: absolute;
+    bottom: 222px;
+    left: 170px;
+}
+.umbrella {
+  position: absolute;
+  left: 240px;
+  top: 155px;
+  font-size: 100px;
+}
+.percent {
+  position: absolute;
+  left: 300px;
+  top: 175px;
+  font-size: 60px;
+}
+.ione {
+  position: absolute;
+  left: 220px;
+  top: 60px;
+  font-size: 20px;
+}
+.itwo {
+  position: absolute;
+  left: 255px;
+  top: 95px;
+  font-size: 20px;
+}
+.ithree {
+  position: absolute;
+  left: 260px;
+  top: 135px;
+  font-size: 20px;
+}
+.ifour {
+  position: absolute;
+  left: 253px;
+  top: 173px;
+  font-size: 20px;
+}
+.ifive {
+  position: absolute;
+  left: 225px;
+  top: 205px;
+  font-size: 20px;
+}
+.isix {
+  position: absolute;
+  left: 175px;
+  top: 220px;
+  font-size: 20px;
+}
+.iseven {
+  position: absolute;
+  left: 125px;
+  top: 205px;
+  font-size: 20px;
+}
+.ieight {
+  position: absolute;
+  left: 95px;
+  top: 173px;
+  font-size: 20px;
+}
+.inine {
+  position: absolute;
+  left: 87px;
+  top: 135px;
+  font-size: 20px;
+}
+.iten {
+  position: absolute;
+  left: 87px;
+  top: 95px;
+  font-size: 20px;
+}
+.i1 {
+  position: absolute;
+  left: 240px;
+  top: 30px;
+  font-size: 30px;
+}
+.i2 {
+  position: absolute; 
+  left: 280px;
+  top: 75px;
+  font-size: 30px;
+}
+.i3 {
+  position: absolute;
+  left: 290px;
+  top: 130px;
+  font-size: 30px;
+}
+.i4 {
+  position: absolute; 
+  left: 275px;
+  bottom: 65px;
+  font-size:30px;
+}
+.i5 {
+  position: absolute;
+  left: 235px;
+  bottom: 20px;
+  font-size: 30px;
+}
+.i6 {
+  position: absolute;
+    top: 250px;
+    left: 165px;
+    font-size: 30px;
+}
+.i7 {
+  position: absolute;
+  left: 90px;
+  bottom: 20px;
+  font-size: 30px;
+}
+.i8 {
+  position: absolute; 
+  left: 45px;
+  bottom: 65px;
+  font-size: 30px;
+}
+.i9 {
+  position: absolute;
+  left: 35px;
+  top: 130px;
+  font-size: 30px;
+}
+.i10 {
+  position: absolute; 
+  left: 40px;
+  top: 75px;
+  font-size: 30px;
+}
+
+/* for the temp component*/
+.component{
+  width: 200px;
+  height: 200px;
+  background-color: darkgray;
+  position: relative;
+  border-radius: 90%;
+  display: flex;
+  justify-content: center;
+  margin-left: 70px;
+  
+}
+  
+.inner{
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 90%;
+  align-self: center;
+  
+}
+.red {
+width: 20px;
+  height: 20px;
+  background-color: #DD2C00;
+  border-radius: 90%;
+  position: absolute;
+  bottom: 222px;
+  left: 170px;
+}
+.ione {
+position: absolute;
+left: 220px;
+top: 60px;
+font-size: 20px;
+}
+.itwo {
+position: absolute;
+left: 255px;
+top: 95px;
+font-size: 20px;
+}
+.ithree {
+position: absolute;
+left: 260px;
+top: 135px;
+font-size: 20px;
+}
+.ifour {
+position: absolute;
+left: 253px;
+top: 173px;
+font-size: 20px;
+}
+.ifive {
+position: absolute;
+left: 225px;
+top: 205px;
+font-size: 20px;
+}
+.isix {
+position: absolute;
+left: 175px;
+top: 220px;
+font-size: 20px;
+}
+.iseven {
+position: absolute;
+left: 125px;
+top: 205px;
+font-size: 20px;
+}
+.ieight {
+position: absolute;
+left: 95px;
+top: 173px;
+font-size: 20px;
+}
+.inine {
+position: absolute;
+left: 87px;
+top: 135px;
+font-size: 20px;
+}
+.iten {
+position: absolute;
+left: 87px;
+top: 95px;
+font-size: 20px;
+}
+.i1 {
+position: absolute;
+left: 240px;
+top: 30px;
+font-size: 30px;
+}
+.i2 {
+position: absolute; 
+left: 280px;
+top: 75px;
+font-size: 30px;
+}
+.i3 {
+position: absolute;
+left: 290px;
+top: 130px;
+font-size: 30px;
+}
+.i4 {
+position: absolute; 
+left: 275px;
+bottom: 65px;
+font-size:30px;
+}
+.i5 {
+position: absolute;
+left: 235px;
+bottom: 20px;
+font-size: 30px;
+}
+.i6 {
+position: absolute;
+  top: 250px;
+  left: 165px;
+  font-size: 30px;
+}
+.i7 {
+position: absolute;
+left: 90px;
+bottom: 20px;
+font-size: 30px;
+}
+.i8 {
+position: absolute; 
+left: 45px;
+bottom: 65px;
+font-size: 30px;
+}
+.i9 {
+position: absolute;
+left: 35px;
+top: 130px;
+font-size: 30px;
+}
+.i10 {
+position: absolute; 
+left: 40px;
+top: 75px;
+font-size: 30px;
+}
+.symbol {
+position: absolute;
+left: 140px;
+bottom: 105px;
+font-size: 70px;
+}
+
+/* for precip component*/
+
+.component{
+  width: 275px;
+  height: 275px;
+  background-color: darkgray;
+  position: relative;
+  border-radius: 90%;
+  display: flex;
+  justify-content: center;
+  margin-left: 120px;
+  margin-top: 25px;
+  
+}
+  
+.inner{
+  width: 225px;
+  height: 225px;
+  background-color: #fff;
+  border-radius: 90%;
+  align-self: center;
+  
+}
+.red {
+width: 20px;
+  height: 20px;
+  background-color: #DD2C00;
+  border-radius: 90%;
+  position: absolute;
+  bottom: 325px;
+  left: 275px;
+}
+.ione {
+position: absolute;
+left: 500px;
+top: 60px;
+font-size: 20px;
+}
+.itwo {
+position: absolute;
+left: 255px;
+top: 95px;
+font-size: 20px;
+}
+.ithree {
+position: absolute;
+left: 260px;
+top: 135px;
+font-size: 20px;
+}
+.ifour {
+position: absolute;
+left: 253px;
+top: 173px;
+font-size: 20px;
+}
+.ifive {
+position: absolute;
+left: 225px;
+top: 205px;
+font-size: 20px;
+}
+.isix {
+position: absolute;
+left: 175px;
+top: 220px;
+font-size: 20px;
+}
+.iseven {
+position: absolute;
+left: 125px;
+top: 205px;
+font-size: 20px;
+}
+.ieight {
+position: absolute;
+left: 95px;
+top: 173px;
+font-size: 20px;
+}
+.inine {
+position: absolute;
+left: 87px;
+top: 135px;
+font-size: 20px;
+}
+.iten {
+position: absolute;
+left: 87px;
+top: 95px;
+font-size: 20px;
+}
+.i1 {
+position: absolute;
+left: 270px;
+top: 5px;
+}
+.i2 {
+position: absolute; 
+left: 275px;
+top:65px;
+}
+.i3 {
+position: absolute;
+left: 285px;
+top: 125px;
+}
+.i4 {
+position: absolute; 
+left: 270px;
+bottom: 55px;
+}
+.i5 {
+position: absolute;
+left: 225px;
+bottom: 10px;
+}
+.i6 {
+position: absolute;
+  top: 250px;
+  left: 155px;
+}
+.i7 {
+position: absolute;
+left: 85px;
+bottom: 10px;
+}
+.i8 {
+position: absolute; 
+left: 38px;
+bottom: 55px;
+}
+.i9 {
+position: absolute;
+left: 25px;
+top: 125px;
+}
+.i10 {
+position: absolute; 
+left: 35px;
+top: 65px;
+}
