@@ -129,7 +129,7 @@ h3 {
     border-radius: 90%;
     display: flex;
     justify-content: center;
-    margin-left: 20px;
+    margin-left: 100px;
     
 }
     
@@ -435,9 +435,9 @@ font-size: 30px;
 }
 .symbol {
 position: absolute;
-left: 140px;
-bottom: 105px;
-font-size: 70px;
+left: 250px;
+bottom: 150px;
+font-size: 90px;
 }
 
 /* for precip component*/
@@ -450,8 +450,8 @@ font-size: 70px;
   border-radius: 90%;
   display: flex;
   justify-content: center;
-  margin-left: 120px;
-  margin-top: 25px;
+  margin-left: 140px;
+  margin-top: 40px;
   
 }
   
@@ -464,121 +464,131 @@ font-size: 70px;
   
 }
 .red {
-width: 20px;
-  height: 20px;
+width: 30px;
+  height: 30px;
   background-color: #DD2C00;
   border-radius: 90%;
   position: absolute;
-  bottom: 325px;
-  left: 275px;
+  bottom: 305px;
+  left: 285px;
 }
 .ione {
 position: absolute;
-left: 500px;
-top: 60px;
-font-size: 20px;
+left: 350px;
+top: 55px;
+font-size: 30px;
 }
 .itwo {
 position: absolute;
-left: 255px;
+left: 400px;
 top: 95px;
-font-size: 20px;
+font-size: 30px;
 }
 .ithree {
 position: absolute;
-left: 260px;
-top: 135px;
-font-size: 20px;
+left: 415px;
+top: 160px;
+font-size: 30px;
 }
 .ifour {
 position: absolute;
-left: 253px;
-top: 173px;
-font-size: 20px;
+left: 395px;
+top: 225px;
+font-size: 30px;
 }
 .ifive {
 position: absolute;
-left: 225px;
-top: 205px;
-font-size: 20px;
+left: 355px;
+top: 270px;
+font-size: 30px;
 }
 .isix {
 position: absolute;
-left: 175px;
-top: 220px;
-font-size: 20px;
+left: 285px;
+top: 290px;
+font-size: 30px;
 }
 .iseven {
 position: absolute;
-left: 125px;
-top: 205px;
-font-size: 20px;
+left: 220px;
+top: 270px;
+font-size: 30px;
 }
 .ieight {
 position: absolute;
-left: 95px;
-top: 173px;
-font-size: 20px;
+left: 180px;
+top: 225px;
+font-size: 30px;
 }
 .inine {
 position: absolute;
-left: 87px;
-top: 135px;
-font-size: 20px;
+left: 165px;
+top: 160px;
+font-size: 30px;
 }
 .iten {
 position: absolute;
-left: 87px;
+left: 175px;
 top: 95px;
-font-size: 20px;
+font-size: 30px;
 }
 .i1 {
 position: absolute;
-left: 270px;
-top: 5px;
+left: 365px;
+top: 15px;
+font-size: 40px;
 }
 .i2 {
 position: absolute; 
-left: 275px;
-top:65px;
+left: 430px;
+top: 80px;
+font-size: 40px;
 }
 .i3 {
 position: absolute;
-left: 285px;
-top: 125px;
+left: 450px;
+top: 160px;
+font-size: 40px;
 }
 .i4 {
 position: absolute; 
-left: 270px;
-bottom: 55px;
+left: 435px;
+top: 245px;
+font-size: 40px;
 }
 .i5 {
 position: absolute;
-left: 225px;
+left: 375px;
 bottom: 10px;
+font-size: 40px;
 }
 .i6 {
 position: absolute;
-  top: 250px;
-  left: 155px;
+  top: 330px;
+  left: 275px;
+  font-size: 40px;
 }
 .i7 {
 position: absolute;
-left: 85px;
+left: 170px;
 bottom: 10px;
+font-size: 40px;
 }
 .i8 {
 position: absolute; 
-left: 38px;
-bottom: 55px;
+left: 115px;
+top: 245px;
+font-size: 40px;
 }
 .i9 {
 position: absolute;
-left: 25px;
-top: 125px;
+left: 100px;
+top: 160px;
+font-size: 40px;
 }
 .i10 {
 position: absolute; 
-left: 35px;
-top: 65px;
+left: 115px;
+top: 80px;
+font-size: 40px;
 }
