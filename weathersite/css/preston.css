@@ -592,3 +592,11 @@ left: 115px;
 top: 80px;
 font-size: 40px;
 }
+
+#curWeather {
+  background-size: cover;
+ }
+
+ .clear {
+  background-image: url("/images/weatherimg/clear.jpg");
+ }
