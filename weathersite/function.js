@@ -1,14 +1,16 @@
 document.addEventListener("DOMContentLoaded", function(){
     let condition ="/snow";
-    buildModDate();
-    const menuButton = document.querySelector("#menuBtn");
-    menuButton.addEventListener('click', mobileMenu);
+    // buildModDate();
+    // const menuButton = document.querySelector("#menuBtn");
+    // menuButton.addEventListener('click', mobileMenu);
     // Variables for Wind Chill function
     let temp = 31;
     let speed = 5;
     buildWC(speed,temp);
 
-    let hour="7";
+    let hour = 7;
+    (13 + 1) % 12;
+    new Date();
 
     timeBall(hour);
 })
@@ -25,7 +27,7 @@ let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp *
  wc = Math.floor(wc);
 
  //if chill is greater than temp, return to temp//
- wc = (wc > temp)?temp:wc;
+ wc = (wc > temp) ? temp :wc;
 
  console.log(wc);
 feelTemp.innerHTML = wc;

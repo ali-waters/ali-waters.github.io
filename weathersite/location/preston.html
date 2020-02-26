@@ -5,8 +5,6 @@
         <meta charset="utf-8">
         <title>Weather Site</title>
         <link rel="stylesheet" href="/css/preston.css">
-        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-        <script src="/function.js"></script>
         <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
     </head>
     <body>
@@ -22,7 +20,7 @@
             <hr>
         </div>
          <div class="flex-container">
-                    <div class="text1"><h1>28<span>&#8457;</span> <br>34 |  19 <br><i class='fas fa-wind'>3.7mph</i></h1></div>
+                    <div class="text1"><h1>28<span>&#8457;</span> <br>34 |  19 <br> <span id="feelTemp"></span><i class='fas fa-wind'>3.7mph</i></h1></div>
                     <div class="one">
                       <div class="component">
                         <div class="inner">
@@ -30,7 +28,7 @@
                     </div>
                     <div class="umbrella">&#9730;</div>
                     <div class="percent">%</div>
-                    <div class="ione">
+                    <div class="ione ball">
                       1
                     </div>
                     <div class="itwo">
@@ -60,17 +58,17 @@
                      <div class="iten">
                       10
                     </div>
-                    <div class="red"></div>
-                    <div class="i1">20</div>
-                    <div class="i2">15</div>
-                    <div class="i3">17</div>
-                    <div class="i4">15</div>
-                    <div class="i5">18</div>
-                    <div class="i6">21</div>
-                    <div class="i7">16</div>
-                    <div class="i8">13</div>
-                    <div class="i9">10</div>
-                   <div class="i10">11</div></div>
+                    
+                    <div class="o1">20</div>
+                    <div class="o2">15</div>
+                    <div class="o3">17</div>
+                    <div class="o4">15</div>
+                    <div class="o5">18</div>
+                    <div class="o6">21</div>
+                    <div class="o7">16</div>
+                    <div class="o8">13</div>
+                    <div class="o9">10</div>
+                   <div class="o10">11</div></div>
 
 
                      <div class="two">
@@ -109,17 +107,17 @@
                      <div class="iten">
                       10
                     </div>
-                    <div class="red"></div>
-                    <div class="i1">51</div>
-                    <div class="i2">52</div>
-                      <div class="i3">54</div>
-                      <div class="i4">56</div>
-                    <div class="i5">55</div>
-                    <div class="i6">57</div>
-                    <div class="i7">57</div>
-                    <div class="i8">56</div>
-                    <div class="i9">55</div>
-                   <div class="i10">52</div> 
+                    
+                    <div class="o1">51</div>
+                    <div class="o2">52</div>
+                      <div class="o3">54</div>
+                      <div class="o4">56</div>
+                    <div class="o5">55</div>
+                    <div class="o6">57</div>
+                    <div class="o7">57</div>
+                    <div class="o8">56</div>
+                    <div class="o9">55</div>
+                   <div class="o10">52</div> 
                      </div>
 
 
@@ -159,17 +157,17 @@
                      <div class="iten">
                       10
                     </div>
-                    <div class="red"></div>
-                    <div class="i1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3ISToxDlUXTrZ-TaCT_yT06cvTNRax-WZdpP30maKD14em3fP" alt="cloud" height=40px width=50px></div>
-                    <div class="i2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3ISToxDlUXTrZ-TaCT_yT06cvTNRax-WZdpP30maKD14em3fP" alt="cloud" height=40px width=50px></div>
-                      <div class="i3"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3ISToxDlUXTrZ-TaCT_yT06cvTNRax-WZdpP30maKD14em3fP" alt="cloud" height=40px width=50px></div>
-                      <div class="i4"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3ISToxDlUXTrZ-TaCT_yT06cvTNRax-WZdpP30maKD14em3fP" alt="cloud" height=40px width=50px></div>
-                    <div class="i5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3ISToxDlUXTrZ-TaCT_yT06cvTNRax-WZdpP30maKD14em3fP" alt="cloud" height=40px width=50px></div>
-                    <div class="i6"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3ISToxDlUXTrZ-TaCT_yT06cvTNRax-WZdpP30maKD14em3fP" alt="cloud" height=40px width=50px></div>
-                    <div class="i7"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3ISToxDlUXTrZ-TaCT_yT06cvTNRax-WZdpP30maKD14em3fP" alt="cloud" height=40px width=50px></div>
-                    <div class="i8"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3ISToxDlUXTrZ-TaCT_yT06cvTNRax-WZdpP30maKD14em3fP" alt="cloud" height=40px width=50px></div>
-                    <div class="i9"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3ISToxDlUXTrZ-TaCT_yT06cvTNRax-WZdpP30maKD14em3fP" alt="cloud" height=40px width=50px></div>
-                   <div class="i10"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3ISToxDlUXTrZ-TaCT_yT06cvTNRax-WZdpP30maKD14em3fP" alt="cloud" height=40px width=50px></div> 
+                    
+                    <div class="o1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3ISToxDlUXTrZ-TaCT_yT06cvTNRax-WZdpP30maKD14em3fP" alt="cloud" height=40px width=50px></div>
+                    <div class="o2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3ISToxDlUXTrZ-TaCT_yT06cvTNRax-WZdpP30maKD14em3fP" alt="cloud" height=40px width=50px></div>
+                      <div class="o3"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3ISToxDlUXTrZ-TaCT_yT06cvTNRax-WZdpP30maKD14em3fP" alt="cloud" height=40px width=50px></div>
+                      <div class="o4"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3ISToxDlUXTrZ-TaCT_yT06cvTNRax-WZdpP30maKD14em3fP" alt="cloud" height=40px width=50px></div>
+                    <div class="o5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3ISToxDlUXTrZ-TaCT_yT06cvTNRax-WZdpP30maKD14em3fP" alt="cloud" height=40px width=50px></div>
+                    <div class="o6"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3ISToxDlUXTrZ-TaCT_yT06cvTNRax-WZdpP30maKD14em3fP" alt="cloud" height=40px width=50px></div>
+                    <div class="o7"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3ISToxDlUXTrZ-TaCT_yT06cvTNRax-WZdpP30maKD14em3fP" alt="cloud" height=40px width=50px></div>
+                    <div class="o8"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3ISToxDlUXTrZ-TaCT_yT06cvTNRax-WZdpP30maKD14em3fP" alt="cloud" height=40px width=50px></div>
+                    <div class="o9"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3ISToxDlUXTrZ-TaCT_yT06cvTNRax-WZdpP30maKD14em3fP" alt="cloud" height=40px width=50px></div>
+                   <div class="o10"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3ISToxDlUXTrZ-TaCT_yT06cvTNRax-WZdpP30maKD14em3fP" alt="cloud" height=40px width=50px></div> 
                     
                      </div>
             
@@ -203,13 +201,12 @@
               <a href="#">Favorites</a>
             </div>
             <p id="demo"></p>
-            <script>
-              var d = new Date(2020, 1, 24);
-              document.getElementById("demo").innerHTML = d;
-            </script>
+           
           </div>
           <div id="ball"></div>
         </footer>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <script src="/function.js"></script>
 </body>
 </html>
         
