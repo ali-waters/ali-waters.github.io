@@ -55,7 +55,9 @@ h3 {
      top: 2500px;
  }
 
- .@media screen and (min-width: 768px);
+ @media screen and (min-width: 768px) {
+
+ }
 
  ul {
      list-style-type: none;

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
+    let condition ="/snow";
     buildModDate();
     const menuButton = document.querySelector("#menuBtn");
     menuButton.addEventListener('click', mobileMenu);
@@ -44,4 +45,12 @@ function timeBall(hour){
     for (let item of hr){
         item.classList.add("ball");
     }
+}
+
+
+
+
+function changeSummaryImage(){
+    let container = querySelector("#idname");
+        container.classList.add(condition);
 }
