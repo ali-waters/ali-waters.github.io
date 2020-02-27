@@ -1,0 +1,61 @@
+All Functions have a length property.
+        function square(x) {
+    return x*x;
+}
+If we query the length property, we can see that it accepts one parameter:
+
+square.length
+<< 1
+
+The call method can be used to set the value inside a function to an object that is provided as the first argument.
+
+the sayHello() function refers to an unspecific object called this that has a property called name :
+
+function sayHello(){
+    return `Hello, my name is ${ this.name }`;
+}
+
+
+--Memoization is a programming technique which attempts to increase a function's performance by caching its previously computed results. Because JavaScript objects behave like associative arrays, they are ideal candidates to act as caches.
+
+Resolved ― the asynchronous operation was completed successfully.
+
+Rejected ― the asynchronous operation didn’t work as expected, wasn't successfully completed or resulted in an error.
+
+JavaScript was originally designed as a client-side scripting language, meaning that it ran locally in the browser, adding dynamic features to the web page that was returned from the server. Ajax allows JavaScript to request resources from a server on behalf of the client. The resources requested are usually JSON data or small fragments of text or HTML rather than a whole web page.
+
+The term 'Ajax' was coined by Jesse James Garrett in 2005 in the article“Ajax: A New Approach to Web Applications,”where he referred to techniques being used by Google in its recent web applications. Ajax was a neat acronym that referred to the different parts of the process being used: Asynchronous JavaScript and XML:
+
+Asynchronous
+When a request for data is sent, the program doesn’t have to stop and wait for the response. It can carry on running, waiting for an event to fire when a response is received. By using callbacks to manage this, programs are able to run in an efficient way, avoiding lag as data is transferred back and forth.
+
+JavaScript
+JavaScript was always considered a 'front-end' language, not used to communicate with the server. Ajax enabled JavaScript to send requests and receive responses from a server, allowing content to be updated in real time.
+
+XML
+When the term Ajax was originally coined, XML documents were often used to return data. Many different types of data can be sent, but by far the most commonly used in Ajax nowadays is JSON, which is more lightweight and easier to parse than XML. JSON also has the advantage of being natively supported in JavaScript, so you can deal with JavaScript objects rather than having to parse XML files using DOM methods.
+
+
+--The Fetch API provides a global fetch() method that only has one mandatory argument, which is the URL of the resource you wish to fetch. A very basic example would look something like the following piece of code--
+
+fetch('url')
+.then( // code that handles the response )
+.catch( // code that runs if the server returns an error )
+
+Some properties with the Response Object are:
+
+ headers – A Headers object (see later section) containing any headers associated with the response
+ url – A string containing the URL of response
+ redirected – A boolean value that specifies if the response is the result of a redirect
+ type – A string value of 'basic', 'cors', 'error' or 'opaque'. A value of 'basic' is used for a response from the same domain. A value of 'cors' means the data was received from a valid cross-origin request from a different domain. A value of 'opaque' is used for a response received from 'no-cors' request from another domain, which means access to the data will be severely restricted. A value of 'error' is used when a network error occurs.
+The response object also contains a number of methods that return promises that can then be chained together.
+
+Redirects--
+    This method can be used to redirect to another URL. it creates a new promise that resolves to the response from the redirected URL.
+
+File Responses--
+    The blob() method is used to read a file of raw data, such as an image or a spreadsheet. Once it has read the whole file, it returns a promise that resolves with a blob object.
+
+JSON Responses--
+    JSON is probably the most common format for AJAX responses. The json() method is used to deal with these by transforming a stream of JSON data into a promise that resolves to a JavaScript object.
+
