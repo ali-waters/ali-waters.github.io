@@ -8,10 +8,9 @@ document.addEventListener("DOMContentLoaded", function(){
     let speed = 5;
     buildWC(speed,temp);
 
-    let hour = 7;
-    (13 + 1) % 12;
-    new Date();
-
+    let d = new Date();
+    let hour = d.getHours() % 12;
+    console.log(hour);
     timeBall(hour);
 })
 
@@ -44,6 +43,7 @@ function timeBall(hour){
     
     // Find all hours that match the parameter and add the "ball" class
     let hr = document.querySelectorAll(".i"+hour);
+    console.log(".i"+hour);
     for (let item of hr){
         item.classList.add("ball");
     }

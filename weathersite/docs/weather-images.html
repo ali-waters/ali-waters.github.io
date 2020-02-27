@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <title>Responsive Images</title>
-        <link rel="stylesheet" href="/css/weather.images.css">
+        <link rel="stylesheet" href="/weathersite/css/weatherimages.css">
     </head>
     <body>
     <header>
@@ -12,8 +12,8 @@
     </header>
 
         <picture>
-            <source srcset="/images/weatherimg/clear-copy.jpg" media="(min-width: 500px) and (max-width: 799px)">
-            <source srcset="/images/weatherimg/clear-copy-2.jpg" media="(min-width: 800px)"> 
+            <source media="(min-width: 800px)" srcset="/weathersite/images/weatherimg/clear-copy-2.jpg"> 
+            <source media="(min-width: 500px)" srcset="/weathersite/images/weatherimg/clear-copy.jpg">
             <img src="/weathersite/images/weatherimg/clear.jpg" alt="pic">
         </picture>
 

@@ -120,6 +120,8 @@ h3 {
     border-radius: 100%;
     background-color: orangered;
     color: transparent;
+    margin-left: -10px;
+    margin-top: 15px;
    }
 
    /* for the umbrella component*/
@@ -164,61 +166,61 @@ h3 {
   top: 175px;
   font-size: 60px;
 }
-.ione {
+.i1 {
   position: absolute;
   left: 220px;
   top: 60px;
   font-size: 20px;
 }
-.itwo {
+.i2 {
   position: absolute;
   left: 255px;
   top: 95px;
   font-size: 20px;
 }
-.ithree {
+.i3 {
   position: absolute;
   left: 260px;
   top: 135px;
   font-size: 20px;
 }
-.ifour {
+.i4 {
   position: absolute;
   left: 253px;
   top: 173px;
   font-size: 20px;
 }
-.ifive {
+.i5 {
   position: absolute;
   left: 225px;
   top: 205px;
   font-size: 20px;
 }
-.isix {
+.i6 {
   position: absolute;
   left: 175px;
   top: 220px;
   font-size: 20px;
 }
-.iseven {
+.i7 {
   position: absolute;
   left: 125px;
   top: 205px;
   font-size: 20px;
 }
-.ieight {
+.i8 {
   position: absolute;
   left: 95px;
   top: 173px;
   font-size: 20px;
 }
-.inine {
+.i9 {
   position: absolute;
   left: 87px;
   top: 135px;
   font-size: 20px;
 }
-.iten {
+.i10 {
   position: absolute;
   left: 87px;
   top: 95px;
@@ -315,61 +317,61 @@ width: 20px;
   bottom: 222px;
   left: 170px;
 }
-.ione {
+.i1 {
 position: absolute;
 left: 220px;
 top: 60px;
 font-size: 20px;
 }
-.itwo {
+.i2 {
 position: absolute;
 left: 255px;
 top: 95px;
 font-size: 20px;
 }
-.ithree {
+.i3 {
 position: absolute;
 left: 260px;
 top: 135px;
 font-size: 20px;
 }
-.ifour {
+.i4 {
 position: absolute;
 left: 253px;
 top: 173px;
 font-size: 20px;
 }
-.ifive {
+.i5 {
 position: absolute;
 left: 225px;
 top: 205px;
 font-size: 20px;
 }
-.isix {
+.i6 {
 position: absolute;
 left: 175px;
 top: 220px;
 font-size: 20px;
 }
-.iseven {
+.i7 {
 position: absolute;
 left: 125px;
 top: 205px;
 font-size: 20px;
 }
-.ieight {
+.i8 {
 position: absolute;
 left: 95px;
 top: 173px;
 font-size: 20px;
 }
-.inine {
+.i9 {
 position: absolute;
 left: 87px;
 top: 135px;
 font-size: 20px;
 }
-.iten {
+.i10 {
 position: absolute;
 left: 87px;
 top: 95px;
@@ -458,8 +460,8 @@ font-size: 90px;
 }
   
 .inner{
-  width: 225px;
-  height: 225px;
+  width: 215px;
+  height: 215px;
   background-color: #fff;
   border-radius: 90%;
   align-self: center;
@@ -474,61 +476,61 @@ width: 30px;
   bottom: 305px;
   left: 285px;
 }
-.ione {
+.i1 {
 position: absolute;
 left: 350px;
 top: 55px;
 font-size: 30px;
 }
-.itwo {
+.i2 {
 position: absolute;
 left: 400px;
 top: 95px;
 font-size: 30px;
 }
-.ithree {
+.i3 {
 position: absolute;
 left: 415px;
 top: 160px;
 font-size: 30px;
 }
-.ifour {
+.i4 {
 position: absolute;
 left: 395px;
 top: 225px;
 font-size: 30px;
 }
-.ifive {
+.i5 {
 position: absolute;
 left: 355px;
 top: 270px;
 font-size: 30px;
 }
-.isix {
+.i6 {
 position: absolute;
 left: 285px;
 top: 290px;
 font-size: 30px;
 }
-.iseven {
+.i7 {
 position: absolute;
 left: 220px;
 top: 270px;
 font-size: 30px;
 }
-.ieight {
+.i8 {
 position: absolute;
 left: 180px;
 top: 225px;
 font-size: 30px;
 }
-.inine {
+.i9 {
 position: absolute;
 left: 165px;
 top: 160px;
 font-size: 30px;
 }
-.iten {
+.i10 {
 position: absolute;
 left: 175px;
 top: 95px;
