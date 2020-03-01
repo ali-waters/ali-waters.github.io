@@ -601,6 +601,12 @@ font-size: 40px;
   background-size: cover;
  }
 
- .clear {
-  background-image: url("/images/weatherimg/clear.jpg");
+ .flex-container {
+   background-image: url("/weathersite/images/weatherimg/clouds.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 1700px;
+ }
+ .highlow {
+   font-size: 90px;
  }
