@@ -602,11 +602,30 @@ font-size: 40px;
  }
 
  .flex-container {
-   background-image: url("/weathersite/images/weatherimg/clouds.jpg");
+   background-image: url("/weathersite/images/weatherimg/clouds.jpg"); 
    background-repeat: no-repeat;
    background-size: cover;
    height: 1700px;
  }
+ .clear {
+  background-image: url("/weathersite/images/weatherimg/clear.jpg");
+}
+
+.clouds {
+  background-image: url("/weathersite/images/weatherimg/clouds.jpg");
+}
+ 
+.fog {
+  background-image: url("/weathersite/images/weatherimg/fog.jpg");
+}
+
+.rain {
+  background-image: url("/weathersite/images/weatherimg/rain.jpg");
+}
+
+.snow {
+ background-image: url("/weathersite/images/weatherimg/snow.jpg");
+}
  .highlow {
    font-size: 90px;
  }

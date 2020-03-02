@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
-    let condition ="/snow";
+    let condition ="/clear";
     // buildModDate();
     // const menuButton = document.querySelector("#menuBtn");
     // menuButton.addEventListener('click', mobileMenu);
@@ -50,9 +50,10 @@ function timeBall(hour){
 }
 
 
-
-
-function changeSummaryImage(){
-    let container = querySelector("#idname");
-        container.classList.add(condition);
+// display background image
+function changeSummaryImage(condition){
+    let container = document.querySelector(".flex-container")
+ 
+    console.log(condition);
+    container.classList.add(condition)
 }
