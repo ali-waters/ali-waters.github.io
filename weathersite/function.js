@@ -57,3 +57,18 @@ function changeSummaryImage(condition){
     console.log(condition);
     container.classList.add(condition)
 }
+
+//get location for local JSON execution//
+var cityLoc = document.getElementsByTagName("body") [0].getAttribute("data-city");
+
+
+//get weather data for cities//
+if (cityLoc !=null) {
+    let weatherURL = "";
+    fetchWeatherData(weatherURL);
+}
+
+//fetch local weather data//
+function fetchWeatherData(weatherURL) {
+
+//
