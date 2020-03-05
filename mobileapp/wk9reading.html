@@ -1,0 +1,75 @@
+The Browser object model BOM for short, is a collection of properites and methods that contain information about the comp screen. We can find out with broswer is being use to view a page, the dimensions of the screen, and which pages were visited before the current page, and for pop up windows.
+
+    The window.location property is an object that contains information about the URL of the current page. It contains a number of properties that provide information about different fragments of the URL.
+        ex -> window.location.href "url"
+
+ The hash property returns a string that starts with a “#” followed by the fragment identifier. It returns an empty string if there is no fragment identifier:
+        ex -> window.location.hash
+
+The origin property returns a string that shows the protocol and domain where the current page originated from. This property is read-only, so cannot be changed:
+        ex -> window.location.origin ""
+
+THE BROWSER HISTORY:::
+The window.history property can be used to access information about any previously visited pages in the current browser session. Avoid confusing this with the new HTML5 History API
+
+The window.history.length property shows how many pages have been visited before arriving at the current page.
+
+The window.history.go() method can be used to go to a specific page, where 0 is the current page:
+
+window.history.go(1); // goes forward 1 page
+window.history.go(0); // reloads the current page
+window.history.go(-1); // goes back 1 page
+
+There are also the window.history.forward() and window.history.back() methods that can be used to navigate forwards and backwards by one page respectively, just like using the browser’s forward and back buttons.
+
+COOKIES:::
+Cookies are small files that are saved locally on a user’s computer. They were invented by Netscape as a way of getting round HTTP being a stateless protocol. This means that a browser does not remember anything from one request to another. So every time a user visits a page, nothing about any previous visits is remembered. Cookies can be used to sidestep this problem by storing information that can then be retrieved between requests.
+
+A restriction of cookies is that they can only be read by a web page from the same domain that set them. This is to stop sites being able to access information about users, such as other sites they have visited. Cookies are also limited to storing up to 4KB of data, although 20 cookies are allowed per domain, which can add up to quite a lot of data.
+
+Cookies can be used for personalizing a user’s browsing experience, storing user preferences, keeping track of user choices (such as a shopping cart), authentication and tracking users. The use of cookies for tracking purposes has been much maligned in recent years. Their use for data storage is starting to be replaced in many cases by the new HTML5 localStorage API as it allows more data to be stored. This is covered in Chapter 14. Cookies are still useful for retaining state information (such as if a user is logged in) because they’re passed between the client and server on every HTTP request.
+
+To create a cookie, you assign it to JavaScript’s “cookie jar”, using the document.cookie property, like so:
+
+document.cookie = 'name=Superman';
+<< "name=Superman"
+The document.cookie property acts like a special type of string. Assigning another cookie to it won’t overwrite the entire property, it will just append it to the end of the string. So we can add more cookies by assigning them to document.cookie :
+
+document.cookie = 'hero=true';
+<< "hero=true"
+document.cookie = 'city=Metropolis';
+<< "city=Metropolis"
+Changing Cookie Values
+A cookie’s value can be changed by reassigning it to document.cookie using the same name but a different value. The following code will update the value of two of the cookies that we set in the previous section:
+
+document.cookie = 'name=Batman'
+<< "name=Batman"
+document.cookie = 'city=Gotham'
+<< "city=Gotham"
+Reading Cookies
+To see the current contents of the cookie jar, simply enter document.cookie :
+
+document.cookie:
+<< "name=Batman; hero=true; city=Gotham"
+We can use the split method to break the string into an array containing each name/value pair, then use a for of loop to iterate through the array:
+
+const cookies = document.cookie.split("; ");
+for (crumb of cookies){
+    const [key,value] = crumb.split("=");
+    console.log(`The value of ${key} is ${value}`);
+}
+<< The value of name is Batman
+The value of hero is true
+The value of city is Gotham
+To see an example of cookies used in the wild, you can visit almost any website, open the browser console, and type document.cookie .
+
+Cookie Expiry Dates
+Cookies are session cookies by default. This means they are deleted once a browser session is finished (when the user closes the browser tab or window). Cookies can be made persistent ― that is, lasting beyond the browser session ― by adding "; expires=date" to the end of the cookie when it’s set, where date is a date value in the UTC String format Day, DD-Mon-YYYY HH:MM:SS GMT . The following example sets a cookie to expire in one day’s time:
+
+const expiryDate = new Date(); 
+const tomorrow = expiryDate.getTime() + 1000 * 60 * 60 * 24;
+expiryDate.setTime(tomorrow);
+document.cookie = `name=Batman; expires=${ expiryDate.toUTCString()}`;
+An alternative is to set the max-age value. This takes a value in seconds, but it wasn’t supported in Internet Explorer before version 10:
+
+document.cookie = 'name=Batman; max-age=86400' // 86400 secs = 1 day
