@@ -629,3 +629,7 @@ font-size: 40px;
  .highlow {
    font-size: 90px;
  }
+
+ .hide {
+   display: none;
+ }

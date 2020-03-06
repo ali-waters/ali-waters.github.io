@@ -1,3 +1,7 @@
+"use strict";
+var pageNav = document.querySelector('#page-nav');
+var statusContainer = document.querySelector('#status');
+var contentContainer = document.querySelector('#main-content');
 document.addEventListener("DOMContentLoaded", function(){
     let condition ="/clear";
     // buildModDate();
@@ -68,7 +72,20 @@ if (cityLoc !=null) {
     fetchWeatherData(weatherURL);
 }
 
+
 //fetch local weather data//
 function fetchWeatherData(weatherURL) {
+    //let cityName= 'Preston';
+fetch(weatherURL).then(function(response) {
+   if (response.ok) {
+     return response.json();
+   }
+   throw new ERROR('Network response was not OK.');
+ }).then(function (data) {
+    
 
-//
+    let p = data[cityLoc];
+ }).catch(function(error){
+    console.log('There was a fetch problem: ', error.message);
+ });
+}
