@@ -45,7 +45,7 @@ function timeBall(hour){
         item.classList.remove("ball");
     }
     
-    // Find all hours that match the parameter and add the "ball" class
+    // Find all hours that match the parameter and add the "ball" class//
     let hr = document.querySelectorAll(".i"+hour);
     console.log(".i"+hour);
     for (let item of hr){
@@ -54,7 +54,7 @@ function timeBall(hour){
 }
 
 
-// display background image
+// display background image//
 function changeSummaryImage(condition){
     let container = document.querySelector(".flex-container")
  
