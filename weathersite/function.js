@@ -116,14 +116,14 @@ let cityData = JSON.stringify({
     sessStore.setItem("lowTemp",  p.properties.relativeLocation.properties.lowTemp);
 
     //wind data//
+    sessStore.setItem("windSpeed", p.properties.relativeLocation.properties.windSpeed);
+    sessStore.setItem("windGust", p.properties.relativeLocation.properties.windGust);
 
 
+//get hourly data//
+getHourly(p.properties.forecastHourly);
 
-
-
-
-
-
+ })
 
 
 
