@@ -18,8 +18,11 @@ p {
     font-size: 35px;
     font-family: 'Bebas Neue';
     margin-left: -210px;
-    margin-right:20px;
+    margin-right: 10px;
     justify-content: center;
+}
+.gps {
+  font-size: 50px;
 }
 h1 {
     font-size: 95px;
