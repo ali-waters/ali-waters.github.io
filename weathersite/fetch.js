@@ -1,4 +1,4 @@
-var url = "json";
+var url = "idahoweather.json";
 var sessStore = window.sessionStorage;
 
 function getWeatherData(url) {
