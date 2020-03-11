@@ -1,8 +1,8 @@
-var url = "idahoweather.json";
+var url = "/idahoweather.json";
 var sessStore = window.sessionStorage;
 
-function getWeatherData(url) {
-    fetch(url)
+function getWeatherData(URL) {
+    fetch(URL)
         .then(function (response) {
             if (response.ok) {
                 return response.json();
@@ -20,14 +20,13 @@ function getWeatherData(url) {
     })
         .catch(function (error) {
         console.log('There was a fetch problem: ', error.message);
-    })
-    }
 
-getWeatherData(url);
+
+
 
 
 //get hourly data from NWs//
-function.getHourly(URL) {
+function getHourly(URL) {
     fetch(URL)
      .then(function (response) {
          if (response.ok)
@@ -62,3 +61,7 @@ sessStore.setItem('shortForecast', data.properties.periods[0].shortForecast);
 
 //build the page//
 buildPage();
+})
+}
+
+getWeatherData(url);

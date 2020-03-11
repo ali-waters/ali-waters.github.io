@@ -71,7 +71,7 @@ var cityLoc = document.getElementsByTagName("body") [0].getAttribute("data-city"
 
 
 //get weather data for cities//
-if (cityLoc !=null) {
+if (cityLoc != null) {
     let weatherURL = "";
     fetchWeatherData(weatherURL);
 }
