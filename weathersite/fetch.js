@@ -39,6 +39,19 @@ function.getHourly(URL) {
 var hourData = [];
 let todayDate = new Date();
 var nowHour = todayDate.getHours();
+console.log('nowHour is ${nowHour}');
+for (let i = 0, x = 11; i <= x; i++) {
+    if (nowHour < 24) {
+        hourData[nowHour] = data.properties.periods[i].temperature + "," + data.properties.periods[i].windspeed + "," + data.properties.periods[i].icon;
+        sessStore.setItem('hour${nowHour}', hourData[nowHour]);
+        nowHour++;
+    } else {
+        nowHour = nowHour - 12;
+        hourData[nowHour] = data.properties.periods[i].temperature + "," + data.properties.periods[i].windspeed + "," + data.properties.periods[i].icon;
+        sessStore.setItem('hour${nowHour}', hourData[nowHour]);
+        nowHour = 1;
+    }
+}
 
 
 

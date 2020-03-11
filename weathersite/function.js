@@ -75,16 +75,58 @@ if (cityLoc !=null) {
 
 //fetch local weather data//
 function fetchWeatherData(weatherURL) {
-    //let cityName= 'Preston';
-fetch(weatherURL).then(function(response) {
+//let cityName= 'Preston';
+fetch(weatherURL)
+ .then(function (response) {
    if (response.ok) {
      return response.json();
    }
    throw new ERROR('Network response was not OK.');
- }).then(function (data) {
+ })
+ .then(function (data) {
+     //check the object that was retrieved//
+     console.log(data);
     
+     let p = data[cityLoc];
 
-    let p = data[cityLoc];
+//get content and location info//
+let locName = p.properties.relativeLocation.properties.city;
+let locState = p.properties.relativeLocation.properties.state;;
+//put them together//
+let fullName = locName + ',' + locState;
+console.log(`fullName is: ${fullName}`);
+
+//get latitude and longitude//
+const latLong = p.properties.relativeLocation.geometry.coordinates[1] + "," + p.properties.relativeLocation.geometry.coordinates[0];
+console.log(latLong);
+
+let cityData = JSON.stringify({
+    fullName,
+    latLong
+    });
+    let dataLabel = cityLoc + "," + locState;
+    localStorage.setItem(dataLabel, cityData);
+
+    sessStore.setItem("fullName", fullName);
+    sessStore.setItem("latLong", latLong);
+
+    //get current conditions info//
+    sessStore.setItem("temperature", p.properties.relativeLocation.properties.temperature);
+    sessStore.setItem("highTemp",  p.properties.relativeLocation.properties.highTemp);
+    sessStore.setItem("lowTemp",  p.properties.relativeLocation.properties.lowTemp);
+
+    //wind data//
+
+
+
+
+
+
+
+
+
+
+
  }).catch(function(error){
     console.log('There was a fetch problem: ', error.message);
  });
