@@ -13,6 +13,7 @@ h3 {
   position: relative;
   left: 175px;
   top: -55px;
+  font-size: 60px;
 }
 p {
     font-size: 35px;
@@ -31,20 +32,20 @@ h1 {
 .current {
   font-size: 85px;
   position: absolute;
-  top: 800px;
-  left: 440px;
+  top: 90px;
+  left: 220px;
 }
 .high {
   font-size: 75px;
   position: absolute;
-  left: 350px;
-  top: 900px
+  left: 150px;
+  top: 185px
 }
 .low {
   font-size: 75px;
   position: absolute;
-  left: 550px;
-  top: 900px
+  left: 350px;
+  top: 185px
 }
 .feelTemp {
   font-size: 85px;
@@ -55,14 +56,15 @@ h1 {
 .columns {
     font-size: 100px;
 }
-h3 {
-    font-size: 60px;
-}
+
 .fas fa-wind {
   font-size: 85px;
   position: absolute;
   top: 800px;
   left: 440px;
+}
+.text1 {
+  position: relative;
 }
   .flex-container {
     display: flex;
@@ -644,7 +646,7 @@ font-size: 40px;
    background-image: url("/images/weatherimg/clouds.jpg"); 
    background-repeat: no-repeat;
    background-size: cover;
-   height: 1700px;
+   height: 1750px;
  }
  .clear {
   background-image: url("/weathersite/images/weatherimg/clear.jpg");
