@@ -6,11 +6,20 @@
     background-color: gainsboro;
 }
 img {
-    padding-right: 5px;
+    margin-left: 100;
+    
+}
+h3 {
+  position: relative;
+  left: 175px;
+  top: -55px;
 }
 p {
-    font-size: 45px;
+    font-size: 35px;
     font-family: 'Bebas Neue';
+    margin-left: -210px;
+    margin-right:20px;
+    justify-content: center;
 }
 h1 {
     font-size: 95px;
