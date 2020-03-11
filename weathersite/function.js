@@ -2,6 +2,10 @@
 var pageNav = document.querySelector('#page-nav');
 var statusContainer = document.querySelector('#status');
 var contentContainer = document.querySelector('#main-content');
+
+var locStore = window.localStorage;
+var sessStore = window.sessionStorage;
+
 document.addEventListener("DOMContentLoaded", function(){
     let condition ="/clear";
     // buildModDate();
@@ -91,7 +95,7 @@ fetch(weatherURL)
 
 //get content and location info//
 let locName = p.properties.relativeLocation.properties.city;
-let locState = p.properties.relativeLocation.properties.state;;
+let locState = p.properties.relativeLocation.properties.state;
 //put them together//
 let fullName = locName + ',' + locState;
 console.log(`fullName is: ${fullName}`);
