@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", function(){
     // const menuButton = document.querySelector("#menuBtn");
     // menuButton.addEventListener('click', mobileMenu);
     // Variables for Wind Chill function
-    let temp = 31;
-    let speed = 5;
+    //let temp = 31;
+   // let speed = 5;
     buildWC(speed,temp);
 
     let d = new Date();
@@ -126,12 +126,163 @@ let cityData = JSON.stringify({
 
 //get hourly data//
 getHourly(p.properties.forecastHourly);
+function getHourly(URL) {
+    fetch(URL)
+    .then(function (response) {
+        if (response.ok) {
+            return response.json();
+        }
+        throw new ERROR('Response not OK.');
+    })
+    .then(function (data) {
+        console.log('Data from getHourly function:');
+        console.log(data);
+    
+        //store 12 hours of data session storage//
+        var hourData = [];
+let todayDate = new Date();
+var nowHour = todayDate.getHours();
+console.log('nowHour is ${nowHour}');
+for (let i = 0, x = 11; i <= x; i++) {
+    if (nowHour < 24) {
+        hourData[nowHour] = data.properties.periods[i].temperature + "," + data.properties.periods[i].windspeed + "," + data.properties.periods[i].icon;
+        sessStore.setItem('hour${nowHour}', hourData[nowHour]);
+        nowHour++;
+    } else {
+        nowHour = nowHour - 12;
+        hourData[nowHour] = data.properties.periods[i].temperature + "," + data.properties.periods[i].windspeed + "," + data.properties.periods[i].icon;
+        sessStore.setItem('hour${nowHour}', hourData[nowHour]);
+        nowHour = 1;
+    }
+}
+ 
+//get the shortforecast value//
+//this will be the condtion for background img//
+sessStore.setItem('shortForecast', data.properties.periods[0].shortForecast);
 
- })
+//call the buildPage function//
+buildPage();
+    })
+.catch(error => console.log('There was a getHourly error:', error))
+}
+
+//build the weather page//
+function buildPage() {
+    let pageTitle = document.querySelector('#page-title');
+    let fullNameNode = document.createTextNode(sessStore/getItem('fullName'));
+    pageTitle.insertBefore(fullNameNode, pageTitle.childNodes[0]);
+//get the h1 to display city location//
+let contentHeading = document.querySelector('#contentHeading');
+contentHeading.innerHTML = sessStore.getItem('fullName');
+//get coordinates for location//
+let latlong = document.querySelector('#latLong');
+latLong.innerHTML = sessStore.getItem('latLong');
+
+//get condition keyword and set background pic//
+changeSummaryImage(sessStore.getItem('shortForecast'));
+
+//set the temp information//
+let highTemp = $('.high');
+let loTemp = $('.loTemp');
+let currentTemp = $('.current');
+let feelTemp = $('.feelTemp');
+highTemp.innerHTML = sessStore.getItem('highTemp') + "°F";
+loTemp.innerHTML = sessStore.getItem('lowTemp') + "°F";
+currentTemp.innerHTML = sessStore.getItem('temperature') + "°F";
+
+//set the wind information//
+let speed = $('#speed');
+let gust = $('#gusting');
+speed.innerHTML = sessStore.getItem('windSpeed');
+gust.innerHTML = sessStore.getItem('windGust');
+
+//calculate the feel like temp//
+feelTemp.innerHTML = buildWC(sessStore.getItem('windspeed'), sessStore.getItem('temperature')) + "°F";
+//set time indicators//
+let thisDate = new Date();
+var currentHour = thisDate.getHours();
+let indicatorHour;
+if (currentHour > 12) {
+    indicatorHour = currentHour - 12;
+} else {
+    indicatorHour = currentHour;
+};
+console.log(`Current hour in the time indicator is: ${currentHour}`);
+//set indicator//
+timeIndicator(indicatorHour);
+
+//hourly temp component//
+let currentData = [];
+let tempHour = currentHour;
+//adjust based on current time//
+for (let i = 0, x = 12; i < x; i++) {
+    if (tempHour <= 23) {
+        currentData[i] = sessStore.getItem('hour' + tempHour).split(",");
+        tempHour++;
+    } else {
+        tempHour = tempHour - 12;
+        currentData[i] = sessStore.getItem('hour' + tempHour).split(",");
+        console.log(`CurrentData[i][0] is: ${currentData[i][0]}`);
+        tempHour = 1;
+    }
+}
+console.log(currentData);
+//loop through array inserting data//
+tempHour = currentHour;
+for (let i = 0, x = 12; i <x; i++) {
+    if (tempHour >= 13) {
+        tempHour = tempHour - 12;
+    }
+    console.log(`Start container is: #temps o.${tempHour}`);
+    $('#temps .o' + tempHour).innerHTML = currentData[i][0];
+    tempHour++;
+}
+
+//hourly wind component//
+let windArray = [];
+let windHour = currentHour;
+for (let i = 0, x = 12; i < x; i++) {
+    if (windHour <= 23) {
+        window.Array[i] = currentData[i][1].split(" ");
+        console.log(`windArray[i] is: ${windArray[i]}`);
+        windHour++;
+    } else {
+        windHour = windHour - 12;
+        windArray[i] = currentData[i][1].split(" ");
+        windHour = 1;
+       }
+      }
+      console.log(windArray);
+      
+      // Insert Wind data
+      // Start with the outer container that matchs the time indicator
+      windHour = currentHour;
+      for (let i = 0, x = 12; i < x; i++) {
+       if (windHour >= 13) {
+        windHour = windHour - 12;
+       }
+       $('#winds .o' + windHour).innerHTML = windArray[i][0];
+       windHour++;
+      }
+      
+      //condition component//
+      let conditionHour = currentHour;
+// Adjust counter based on current time
+for (let i = 0, x = 12; i < x; i++) {
+ if (conditionHour >= 13) {
+  conditionHour = conditionHour - 12;
+ }
+ $('#condition .o' + conditionHour).innerHTML = '<img src="' + currentData[i][2] + '" alt="hourly weather condition image">';
+ conditionHour++;
+}
+    
 
 
-
- }).catch(function(error){
+    .catch(function(error){
     console.log('There was a fetch problem: ', error.message);
  });
+
+ //change status of containers//
+ contentContainer.setAttribute('class', '');
+ statusContainer.setAttribute('class', 'hide');
 }
