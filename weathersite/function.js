@@ -278,8 +278,8 @@ for (let i = 0, x = 12; i < x; i++) {
     
 
 
-    .catch(function(error){
-    console.log('There was a fetch problem: ', error.message);
+    .catch (function (error) {
+    console.log('There was a fetch problem:' , error.message);
  });
 
  //change status of containers//

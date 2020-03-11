@@ -16,6 +16,30 @@ h1 {
     font-size: 95px;
     font-family: 'Bebas Neue';
 }
+.current {
+  font-size: 85px;
+  position: absolute;
+  top: 800px;
+  left: 440px;
+}
+.high {
+  font-size: 75px;
+  position: absolute;
+  left: 350px;
+  top: 900px
+}
+.low {
+  font-size: 75px;
+  position: absolute;
+  left: 550px;
+  top: 900px
+}
+.feelTemp {
+  font-size: 85px;
+  position: absolute;
+  top: 800px;
+  left: 440px;
+}
 .columns {
     font-size: 100px;
 }
@@ -23,7 +47,10 @@ h3 {
     font-size: 60px;
 }
 .fas fa-wind {
-    font-size: 15px;
+  font-size: 85px;
+  position: absolute;
+  top: 800px;
+  left: 440px;
 }
   .flex-container {
     display: flex;
