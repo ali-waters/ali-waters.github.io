@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", function(){
     let hour = d.getHours() % 12;
     console.log(hour);
     timeBall(hour);
+//get weather json data//
+let weatherURL = "idahoweather.json";
+fetchWeatherData(weatherURL);
 })
 
 //This is for the calculation of wind chill temp//
@@ -66,16 +69,6 @@ function changeSummaryImage(condition){
     container.classList.add(condition)
 }
 
-//get location for local JSON execution//
-var cityLoc = document.getElementsByTagName("body") [0].getAttribute("data-city");
-
-
-//get weather data for cities//
-if (cityLoc != null) {
-    let weatherURL = "";
-    fetchWeatherData(weatherURL);
-}
-
 
 //fetch local weather data//
 function fetchWeatherData(weatherURL) {
@@ -103,6 +96,9 @@ console.log(`fullName is: ${fullName}`);
 //get latitude and longitude//
 const latLong = p.properties.relativeLocation.geometry.coordinates[1] + "," + p.properties.relativeLocation.geometry.coordinates[0];
 console.log(latLong);
+
+//get location for local JSON execution//
+var cityLoc = document.getElementsByTagName("body") [0].getAttribute("data-city");
 
 let cityData = JSON.stringify({
     fullName,
@@ -137,6 +133,9 @@ function getHourly(URL) {
     .then(function (data) {
         console.log('Data from getHourly function:');
         console.log(data);
+    })
+    
+    //.catch(function(error))
     
         //store 12 hours of data session storage//
         var hourData = [];
@@ -275,14 +274,15 @@ for (let i = 0, x = 12; i < x; i++) {
  $('#condition .o' + conditionHour).innerHTML = '<img src="' + currentData[i][2] + '" alt="hourly weather condition image">';
  conditionHour++;
 }
-    
 
-
-    .catch (function (error) {
-    console.log('There was a fetch problem:' , error.message);
- });
 
  //change status of containers//
  contentContainer.setAttribute('class', '');
  statusContainer.setAttribute('class', 'hide');
+}
+
+//get weather data for cities//
+if (cityLoc != null) {
+    let weatherURL = "";
+    fetchWeatherData(weatherURL);
 }
