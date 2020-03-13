@@ -177,17 +177,17 @@ function buildPage() {
 let contentHeading = document.querySelector('#contentHeading');
 contentHeading.innerHTML = sessStore.getItem('fullName');
 //get coordinates for location//
-let latlong = document.querySelector('#latLong');
+let latlong = document.querySelector('latLong');
 latLong.innerHTML = sessStore.getItem('latLong');
 
 //get condition keyword and set background pic//
 changeSummaryImage(sessStore.getItem('shortForecast'));
 
 //set the temp information//
-let highTemp = $('.high');
-let loTemp = $('.loTemp');
-let currentTemp = $('.current');
-let feelTemp = $('.feelTemp');
+let highTemp = $('high');
+let loTemp = $('low');
+let currentTemp = $('current');
+let feelTemp = $('feelTemp');
 highTemp.innerHTML = sessStore.getItem('highTemp') + "°F";
 loTemp.innerHTML = sessStore.getItem('lowTemp') + "°F";
 currentTemp.innerHTML = sessStore.getItem('temperature') + "°F";

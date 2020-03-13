@@ -643,7 +643,7 @@ font-size: 40px;
  }
 
  .flex-container {
-   background-image: url("/images/weatherimg/clouds.jpg"); 
+   background-image: url("/weathersite/images/weatherimg/clouds.jpg"); 
    background-repeat: no-repeat;
    background-size: cover;
    height: 1750px;
