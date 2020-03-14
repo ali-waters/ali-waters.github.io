@@ -184,9 +184,9 @@ latLong.innerHTML = sessStore.getItem('latLong');
 changeSummaryImage(sessStore.getItem('shortForecast'));
 
 //set the temp information//
-let highTemp = $('high');
-let loTemp = $('low');
-let currentTemp = $('current');
+let highTemp = $('#highTemp');
+let loTemp = $('#lowTemp');
+let currentTemp = $('#temperature');
 let feelTemp = $('feelTemp');
 highTemp.innerHTML = sessStore.getItem('highTemp') + "°F";
 loTemp.innerHTML = sessStore.getItem('lowTemp') + "°F";
