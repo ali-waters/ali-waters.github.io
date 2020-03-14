@@ -12,14 +12,14 @@ document.addEventListener("DOMContentLoaded", function(){
     // const menuButton = document.querySelector("#menuBtn");
     // menuButton.addEventListener('click', mobileMenu);
     // Variables for Wind Chill function
-    //let temp = 31;
-   // let speed = 5;
-   // buildWC(speed,temp);
+    let temp = 31;
+   let speed = 5;
+   buildWC(speed,temp);
 
-   // let d = new Date();
-   // let hour = d.getHours() % 12;
-  //  console.log(hour);
-   // timeBall(hour);
+   let d = new Date();
+ let hour = d.getHours() % 12;
+   console.log(hour);
+   timeBall(hour);
 //get weather json data//
 let weatherURL = "/weathersite/js/idahoweather.json";
 fetchWeatherData(weatherURL);
