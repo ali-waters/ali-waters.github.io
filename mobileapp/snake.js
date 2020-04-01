@@ -26,12 +26,12 @@ let right = new Audio();
 let left = new Audio();
 let down = new Audio();
 
-dead.src = "/Users/ali/Desktop/ali-waters.github.io/mobileapp/dead.wav";
-eat.src = "audio/eat.mp3";
-up.src = "audio/up.mp3";
-right.src = "audio/right.mp3";
-left.src = "audio/left.mp3";
-down.src = "audio/down.mp3";
+dead.src = "dead.wav";
+eat.src = "chomp.wav";
+up.src = "bop.wav";
+right.src = "bop.wav";
+left.src = "bop.wav";
+down.src = "bop.wav";
 
 // create the snake
 
