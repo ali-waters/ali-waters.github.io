@@ -1,0 +1,10 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  padding: 5px;
+  grid-template-rows: 100px 100px 100px;
+  border: none;
+}
+.grid-item {
+  border: 2px solid;
+}
