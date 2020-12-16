@@ -12,10 +12,10 @@ const box = 32;
 // load images
 
 const ground = new Image();
-ground.src = "ground.png";
+ground.src = "https://github.com/ali-waters/ali-waters.github.io/blob/master/mobileapp/ground.png";
 
 const foodImg = new Image();
-foodImg.src = "food.png";
+foodImg.src = "https://github.com/ali-waters/ali-waters.github.io/blob/master/mobileapp%202/food.png";
 
 // load audio files
 
