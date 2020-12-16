@@ -1,0 +1,3 @@
+Error: No files matching the pattern "stylesheet.css" were found.
+    at /usr/local/lib/node_modules/stylelint/lib/standalone.js:207:12
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
